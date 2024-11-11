@@ -1,12 +1,8 @@
-provider "aws" {
-  region	=  "us-east-1"
-}
-
-resource "aws_instance" "myec2" {
-  ami	= "ami-0866a3c8686eaeeba"
-  instance_type = "t3.micro"
+resource "aws_instance" "terrainstnace" {
+  ami	= var.ami
+  instance_type = var.instance_type
 
   tags = {
-     Name = "2nd-ec2"
+     Name = "tfinstance1"
   }
 }
