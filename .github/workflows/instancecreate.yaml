@@ -5,7 +5,7 @@ on:
 
 jobs:
   tf_fmt:
-    name: Deployment
+    name: Creating AWS instance
     runs-on: ubuntu-latest
     steps:
 
