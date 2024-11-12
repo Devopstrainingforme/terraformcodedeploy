@@ -6,7 +6,3 @@ resource "aws_instance" "terrainstnace" {
      Name = "tfinstance1"
   }
 }
-
-output "instance_id" {
-    value = aws_instance.terrainstnace.id
-}
