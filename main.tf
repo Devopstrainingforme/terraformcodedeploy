@@ -4,11 +4,11 @@ provider "aws" {
 }
 
 module "vpc" {
-  source = "./module/vpc"
+  source = "./modules/vpc"
 }
 
 module "subnets" {
-  source = "./module/subnets"
+  source = "./modules/subnets"
 }
 
 module "security-group" {
