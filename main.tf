@@ -17,4 +17,6 @@ module "security-group" {
 
 module "ec2" {
   source = "./modules/ec2"
+  ami = var.imageid
+  instance_type = var.terrainstype
 }
