@@ -1,7 +1,3 @@
-module "vpc" {
-  source = "./modules/vpc"
-}
-
 resource "aws_security_group" "terrasecuritygroup1" {
   name = "allow_ports"
   vpc_id = module.vpc.vpc_id

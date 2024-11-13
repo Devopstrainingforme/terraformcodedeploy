@@ -1,7 +1,3 @@
-module "vpc" {
-  source = "./modules/vpc"
-}
-
 resource "aws_subnet" "terrainssubnet1" {
   vpc_id     = module.vpc.vpc_id
   cidr_block = var.cidr_sb1
