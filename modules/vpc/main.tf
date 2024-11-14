@@ -1,3 +1,4 @@
+/*
 resource "aws_vpc" "terrainstancevpc1" {
   cidr_block = var.cidr
   
@@ -5,3 +6,4 @@ resource "aws_vpc" "terrainstancevpc1" {
     Name = "terrainstancevpc1"
   }
 }
+*/

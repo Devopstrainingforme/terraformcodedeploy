@@ -9,3 +9,8 @@ variable "zone_sb1" {
   type = string
   default = "us-east-1"
 }
+
+variable "subnetid" {
+  default = "This is the name of the subnet-1"
+  type = string
+}

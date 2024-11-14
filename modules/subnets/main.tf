@@ -1,3 +1,4 @@
+/*
 resource "aws_subnet" "terrainssubnet1" {
   vpc_id     = module.vpc.terravpcid
   cidr_block = var.cidr_sb1
@@ -36,3 +37,4 @@ resource "aws_route_table_association" "terra_rt1" {
   subnet_id      = aws_subnet.terrainssubnet1.id
   route_table_id = aws_route_table.terraroutetable1.id
 }
+*/
