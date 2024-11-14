@@ -1,4 +1,4 @@
-resource "aws_vpc" "terrainstacevpc1" {
+resource "aws_vpc" "terrainstancevpc1" {
   cidr_block = var.cidr
   
   tags = {

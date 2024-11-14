@@ -1,3 +1,3 @@
 output "terravpcid" {
-    value = aws_vpc.terrainstacevpc1.id
+    value = aws_vpc.terrainstancevpc1.id
 }
