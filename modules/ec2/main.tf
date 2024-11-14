@@ -13,3 +13,4 @@ root_block_device {
 tags = {
     name = "terraserver1"
 }
+}
