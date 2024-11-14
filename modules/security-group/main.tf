@@ -1,6 +1,6 @@
 resource "aws_security_group" "terrasecuritygroup1" {
   name = "allow_ports"
-  vpc_id = module.vpc.vpc_id
+  vpc_id = module.vpc.terravpcid
 
 ingress {
     description = "Allowing port for ssh connection"

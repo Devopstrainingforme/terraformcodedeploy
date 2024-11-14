@@ -1,5 +1,5 @@
 resource "aws_subnet" "terrainssubnet1" {
-  vpc_id     = module.vpc.vpc_id
+  vpc_id     = module.vpc.terravpcid
   cidr_block = var.cidr_sb1
   availability_zone = var.zone_sb1
   map_public_ip_on_launch  = true
@@ -10,7 +10,7 @@ resource "aws_subnet" "terrainssubnet1" {
 }
 
 resource "aws_internet_gateway" "terrainternetgw1" {
-  vpc_id = module.vpc.vpc_id
+  vpc_id = module.vpc.terravpcid
 
   tags = {
     Name = "terrainternetgw1"
@@ -18,7 +18,7 @@ resource "aws_internet_gateway" "terrainternetgw1" {
 }
 
 resource "aws_route_table" "terraroutetable1" {
-  vpc_id = module.vpc.vpc_id
+  vpc_id = module.vpc.terravpcid
 
 
   route {
