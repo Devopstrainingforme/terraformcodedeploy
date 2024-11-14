@@ -1,5 +1,5 @@
 module "vpc" {
-  source = "../vpc"
+  source = "./modules/vpc"
 }
 
 resource "aws_security_group" "ssh-allowed" {
