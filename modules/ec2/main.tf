@@ -1,9 +1,9 @@
 module "security_group" {
-  source = "./modules/security_group"
+  source = "../security_group"
 }
 
 module "subnet" {
-  source = "./modules/subnet"
+  source = "../subnet"
 }
 
 resource "aws_instance" "terraserver1" {
