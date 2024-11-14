@@ -1,11 +1,3 @@
-module "subnets" {
-  source = "./modules/subnets"
-}
-
-module "security-group" {
-  source = "./modules/security-group"
-}
-
 resource "aws_instance" "terraserver1" {
     ami = var.imageid
     name = var.instance_name
@@ -20,6 +12,4 @@ root_block_device {
 
 tags = {
     name = "terraserver1"
-}
-
 }
