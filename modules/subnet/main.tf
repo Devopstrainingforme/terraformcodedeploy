@@ -44,7 +44,6 @@ resource "aws_route_table" "terra_rt2" {
 }
 
 resource "aws_route_table_association" "terrapublicsnet1_asso" {
-  count = length(var.terrapublicsnet1_cidrs)
   subnet_id      = aws_subnet.terrapublicsnet1.id
   route_table_id = aws_route_table.terra_rt2.id
 }
