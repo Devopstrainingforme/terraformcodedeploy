@@ -1,7 +1,7 @@
 variable "imageid" {
     description = "default image id"
     type = string
-    default = "ami-04e914639d0cca79a"
+    default = "ami-063d43db0594b521b"
 }
 
 variable "terrainstype" {
