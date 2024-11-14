@@ -4,22 +4,21 @@ module "vpc" {
 
 resource "aws_subnet" "terrapublicsnet1" {
   
-  count = length(var.terrapublicsnet1_cidrs)
   vpc_id = module.vpc.vpc1_id
-  cidr_block = element(var.terrapublicsnet1_cidrs, count.index)
+  cidr_block = var.terrapublicsnet1_cidrs
 
   tags = {
-    Name = "terrapublicsnet1 ${count.index +1}"
+    Name = "terrapublicsnet1"
   }
 }
 
 resource "aws_subnet" "terraprivatesnet1" {
-  count = length(var.terraprivatesnet1_cidrs)
+
   vpc_id = module.vpc.vpc1_id
-  cidr_block = element(var.terraprivatesnet1_cidrs, count.index)
+  cidr_block = var.terraprivatesnet1_cidrs
 
   tags = {
-    Name = "terraprivatesnet1 ${count.index +1}"
+    Name = "terraprivatesnet1"
   }
 }
 
@@ -46,6 +45,6 @@ resource "aws_route_table" "terra_rt2" {
 
 resource "aws_route_table_association" "terrapublicsnet1_asso" {
  count = length(var.terrapublicsnet1_cidrs)
- subnet_id      = element(aws_subnet.terrapublicsnet1[*].id, count.index)
+ subnet_id      = aws_subnet.terrapublicsnet1.id
  route_table_id = aws_route_table.terra_rt2.id
 }
