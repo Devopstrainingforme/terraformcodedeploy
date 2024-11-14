@@ -15,10 +15,11 @@ module "subnets" {
 }
 */
 
+/*
 module "security-group" {
   source = "./modules/security-group"
 }
-
+*/
 module "ec2" {
   source = "./modules/ec2"
 }
