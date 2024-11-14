@@ -1,4 +1,9 @@
+module "vpc" {
+  source = "../vpc"
+}
+
 resource "aws_subnet" "terrapublicsnet1" {
+  
   count = length(var.terrapublicsnet1_cidrs)
   vpc_id = module.vpc.vpc1_id
   cidr_block = element(var.terrapublicsnet1_cidrs, count.index)

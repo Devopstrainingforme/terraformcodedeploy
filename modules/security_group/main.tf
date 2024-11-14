@@ -1,3 +1,7 @@
+module "vpc" {
+  source = "../vpc"
+}
+
 resource "aws_security_group" "ssh-allowed" {
   vpc_id = module.vpc.vpc1_id
 

@@ -1,3 +1,11 @@
+module "security_group" {
+  source = "../security_group"
+}
+
+module "subnet" {
+  source = "../subnet"
+}
+
 resource "aws_instance" "terraserver1" {
   ami = var.imageid
   instance_type = var.terrainstype
